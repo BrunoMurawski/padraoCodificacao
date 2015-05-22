@@ -65,15 +65,16 @@ public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeir
 <p>Private</p>
 
 <p>Essa ordem tem como objetivo demonstrar os atributos por nível de visibilidade. Indo desde a restrição de acesso mais aberta até a mais restrita</p>
-<p>Modifier    | Class | Package | Subclass | World
-————————————+———————+—————————+——————————+———————
-public      |   ✔   |    ✔    |    ✔     |   ✔
-————————————+———————+—————————+——————————+———————
-protected   |   ✔   |    ✔    |    ✔     |   ✘
-————————————+———————+—————————+——————————+———————
-no modifier |   ✔   |    ✔    |    ✘     |   ✘
-————————————+———————+—————————+——————————+———————
-private     |   ✔   |    ✘    |    ✘     |   ✘</p>
+
+<p>Modifier    | Class | Package | Subclass | World</p>
+
+<p>public      |   ✔   |    ✔    |    ✔     |   ✔</p>
+
+<p>protected   |   ✔   |    ✔    |    ✔     |   ✘</p>
+
+<p>no modifier |   ✔   |    ✔    |    ✘     |   ✘</p>
+
+<p>private     |   ✔   |    ✘    |    ✘     |   ✘</p>
 
 <pre><code>
 public class MinhaClasse {    //classe public
@@ -83,7 +84,7 @@ public class MinhaClasse {    //classe public
 }
 </code></pre>
 
-<p>Também é recomendado que atributos constantes como <code>private final String URL = "https://github.com/brunomurawski";</code> devem utilizar nomes "uppercase".</p>
+<p>Também é recomendado que atributos constantes como <code>URL</code> devem utilizar nomes "uppercase": <code>private final String URL = "https://github.com/brunomurawski";</code.</p>
 
 
 <h3>

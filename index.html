@@ -22,10 +22,7 @@
       <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sobre o Padrão Better Way</h3>
 
-<p> O padrão Better Way tem como principal finalidade a busca pela legibilidade, clareza e agilidade na compreensão dos códigos. Ele retrata algumas boas práticas de programação com a finalidade de facilitar o entendimento do programador ao ler o código, diminuindo assim a possibildade de ocorrerem erros por má interpretação do código. O padrão almeja a produção e manutenção mais rápida em grupo através da  através das boas práticas e o código limpo.  </p>
-
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p> O padrão Better Way tem como principal finalidade a busca pela legibilidade, clareza e agilidade na compreensão dos códigos. Ele retrata algumas boas práticas de programação com a finalidade de facilitar o entendimento do programador ao ler o código, diminuindo assim a possibildade de ocorrerem erros por má interpretação do código. O padrão almeja a produção e manutenção mais rápida em grupo através da  através das boas práticas e o código limpo.</p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boas Práticas</h3>
@@ -62,7 +59,32 @@ public String sPrimeiroItem { get { return "161213"; } }
 public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeiroItem)); } }
 </code></pre>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>O padrão indica que seja seguida uma hierarquia na declaração, ordenada pelos modificadores na seguinte ordem:</p>
+<p>Public</p>
+<p>Protected</p>
+<p>Private</p>
+
+<p>Essa ordem tem como objetivo demonstrar os atributos por nível de visibilidade. Indo desde a restrição de acesso mais aberta até a mais restrita</p>
+<p>Modifier    | Class | Package | Subclass | World
+————————————+———————+—————————+——————————+———————
+public      |   ✔   |    ✔    |    ✔     |   ✔
+————————————+———————+—————————+——————————+———————
+protected   |   ✔   |    ✔    |    ✔     |   ✘
+————————————+———————+—————————+——————————+———————
+no modifier |   ✔   |    ✔    |    ✘     |   ✘
+————————————+———————+—————————+——————————+———————
+private     |   ✔   |    ✘    |    ✘     |   ✘</p>
+
+<pre><code>
+public class MinhaClasse {    //classe public
+    private int inteiro;      //atributo inteiro private
+    protected Float decimal;  //atributo float protected
+    boolean ativado;          //atributo booleano namespace-private
+}
+</code></pre>
+
+<p>Também é recomendado que atributos constantes como <code>private final String URL = "https://github.com/brunomurawski";</code> devem utilizar nomes "uppercase".</p>
+
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>

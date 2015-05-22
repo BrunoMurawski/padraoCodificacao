@@ -35,9 +35,34 @@
 <h3>
 <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Declaração de Variáveis</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>O padrão Better Way recomenda que as declarações de atributos e variáveis devem ser feitas verticalmente.</p>
+<p>Não é recomendado as declarações de atributos e variáveis horizontalmente.
+  Declarando verticalmente, o programador conseguirá ler semanticamente e identificar mais rapidamente o código escrito.</p>
+
+<pre><code>
+private LoginPage login;
+private Usuario usuario;
+private CarrinhoPage carrinho;
+private PesquisaProdutoPage pesquisa;
+private ProdutoPage produtoPage;
+private Produto produto;
+private PesquisaProduto pesquisaProduto;
+private Menu menu;
+private MenuPage menuPage;
+</code></pre>
+
+<p>Ou:</p>
+
+
+<pre><code>
+public String sMenuCalcadosCrianca { get { return "#menu01 > li:nth-child(3)"; } }
+public IWebElement MenuCalcadosCrianca { get { return driver.FindElement(By.CssSelector(sMenuCalcadosCrianca)); } }
+        
+public String sMenuCalcadosCriancaLink { get { return "#menu01 > li:nth-child(3) > div > div > ul > li:nth-child(3) > div > div > ul > li:nth-child(1) > a"; } }
+public IWebElement MenuCalcadosCriancaLink { get { return driver.FindElement(By.CssSelector(sMenuCalcadosCriancaLink)); } }
+
+public String sPrimeiroItem { get { return "161213"; } }        
+public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeiroItem)); } }
 </code></pre>
 
 <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>

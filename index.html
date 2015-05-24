@@ -68,7 +68,7 @@ public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeir
 
 <p>Modifier    | Class | Package | Subclass | World</p>
 
-<p>public      |   ✔   |    ✔    |    ✔     |   ✔</p>
+<p>public         |   ✔   |    ✔    |    ✔     |   ✔</p>
 
 <p>protected   |   ✔   |    ✔    |    ✔     |   ✘</p>
 
@@ -76,16 +76,40 @@ public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeir
 
 <p>private     |   ✔   |    ✘    |    ✘     |   ✘</p>
 
+<p>Recomendado:</p>
+
 <pre><code>
-public class MinhaClasse {    //classe public
+public class MinhaClasse {    //classe pública
     private int inteiro;      //atributo inteiro private
-    protected Float decimal;  //atributo float protected
+    protected Decimal decimal;  //atributo float protected
+    boolean ativado;          //atributo booleano namespace-private
+}
+</code></pre>
+
+<p>Não recomendado:</p>
+
+<pre><code>
+public class MinhaClasse {    //classe pública
+    private int inteiro;      //atributo inteiro private
+    public Double valor;      //atributo público
+    protected Decimal decimal;  //atributo float protected
     boolean ativado;          //atributo booleano namespace-private
 }
 </code></pre>
 
 <p>Também é recomendado que atributos constantes como <code>URL</code> devem utilizar nomes "uppercase": <code>private final String URL = "https://github.com/brunomurawski";</code.</p>
 
+
+<h3>
+  <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true">
+    <span class="octicon octicon-link"></span>
+  </a>Nomenclatura de Variáveis e Métodos
+</h3>
+
+<p>Recomenda-se iniciar o nome com um verbo, ser um nome mais completo possível e passar através do nome o significado do que é proposto. 
+  É muito importante que ao se ler o nome da variável ou método seja possível entender o que ela/ele faz. Crie nomes intuitívos para que qualquer programador possa facilmente entende-la no contexto do código.</p>
+  
+  <p>O padrão também recomenda que as palavras sejam separadas com letra maiuscula e colocar um nome que referencie o tipo de retorno e seja intuitivo</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>

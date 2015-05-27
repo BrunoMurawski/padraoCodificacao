@@ -77,7 +77,6 @@ public IWebElement PrimeiroItem { get { return driver.FindElement(By.Id(sPrimeir
 <p>private     |   ✔   |    ✘    |    ✘     |   ✘</p>
 
 <p>Recomendado:</p>
-
 <pre><code>
 public class MinhaClasse {    //classe pública
     private int inteiro;      //atributo inteiro private
@@ -107,7 +106,39 @@ public class MinhaClasse {    //classe pública
   É muito importante que, ao se ler o nome da variável ou método seja possível entender o que ela/ele faz.
   Criar nomes intuitívos facilita a compreensão de seu código. Qualquer programador deve ser capaz de facilmente entender o que é proposto no contexto do código.</p>
   
-  <p>O padrão também recomenda que as palavras sejam separadas com letra maiuscula e colocar um nome que referencie o tipo de retorno e seja intuitivo</p>
+  <p>O padrão também recomenda que as palavras sejam separadas com letra maiúscula e colocar um nome que referencie o tipo de retorno e seja intuitivo</p>
+
+<p>Recomendado:</p>
+<pre><code>
+//código aqui com cenário descrito
+</code></pre>
+
+<p>Não recomendado:</p>
+
+<pre><code>
+//código aqui com nome genérico que não indique o que o cenário faz
+</code></pre>
+
+<h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Organização de Namespaces e Classes</h3>
+
+<p>O nome do Namespace deve refletir o propósito das classes presentes no mesmo: 
+
+Se o namespace contém as classes com chamadas a métodos de cenários de testes, o mesmo deve ter isso indicado em sua assinatura. Isso auxilia na compreensão do programador em relação a qual namespace a classe pertence.
+	
+Ex: ao se importar uma classe em um código, pode-se somente pela sua chamada na importação identificar a natureza de seu conteúdo.
+</p>
+
+<p>Recomendado:</p>
+<pre><code>
+//using correto
+</code></pre>
+
+<p>Não recomendado:</p>
+
+<pre><code>
+//using incorreto
+</code></pre>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>

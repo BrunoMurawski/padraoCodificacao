@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Padraocodificacao by BrunoMurawski</title>
+    <title>Padraocodificacao por BrunoMurawski</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,11 +11,22 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Padraocodificacao</h1>
+      <h1 class="project-name">Padrao de Codificacao Better Way</h1>
       <h2 class="project-tagline"></h2>
-      <a href="https://github.com/BrunoMurawski/padraoCodificacao" class="btn">View on GitHub</a>
-      <a href="https://github.com/BrunoMurawski/padraoCodificacao/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/BrunoMurawski/padraoCodificacao/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Clareza na Escrita</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Declaração de Variáveis</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Nomenclatura</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Comentários</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Identação</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Organização de Namespaces e Classes</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Contato</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
+      <a href="http://brunomurawski.github.io/padraoCodificacao/" class="btn">Sobre</a>
     </section>
 
     <section class="main-content">
@@ -34,11 +45,17 @@ Essa leitura pode ocorrer tanto na busca por novos conhecimentos na web, quanto 
 </p>
 <p>Tendo isso em vista, é fundamental que o programador pense antes de escrever nossas classes e métodos, que outras pessoas irão lê-las e possivelmente realizar manutenções nas mesmas.</p>
 <p>Por essa razão, este padrão recomenda que o programador ao escrever um trecho de código, pense em qual a percepção que possivelmente outros programadores teriam sobre o código escrito.</p
-<p>A seguir seguirão algumas recomendações que podem auxiliar na criação de um código mais intuitívo e de fácil manutenção:</p>
+<p>A seguir seguirão algumas recomendações que podem auxiliar na criação de um código mais intuitivo e de fácil manutenção:</p>
 
 <h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Declaração de Variáveis</h3>
+<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true">
+  <span class="octicon octicon-link"></span></a>Declaração de Variáveis e Métodos</h3>
 
+<p>O padrão indica a declaração das variáveis e atributos no topo da classe. 
+  Pois julga-se que as variáveis são melhores encontradas quando são declaradas no início do código. 
+  Tão logo o programador inicie a leitura do código verá os atributos e variáveis utilizados no contexto da classe.</p>
+
+<p>Nomenclatura:</p>
 <p>O padrão Better Way recomenda que as declarações de atributos e variáveis devem ser feitas verticalmente.</p>
 <p>Não é recomendado as declarações de atributos e variáveis horizontalmente.
   Declarando verticalmente, o programador conseguirá ler semanticamente e identificar mais rapidamente o código escrito.</p>
@@ -112,7 +129,7 @@ public class MinhaClasse {    //classe pública
 
 <p>Recomenda-se iniciar o nome da variável ou método com um verbo. Ser autoexplicativo, o mais completo possível e passar sua razão de existir pelo nome também é indicado. 
   É muito importante que, ao se ler o nome da variável ou método seja possível entender o que ela/ele faz.
-  Criar nomes intuitívos facilita a compreensão de seu código. Qualquer programador deve ser capaz de facilmente entender o que é proposto no contexto do código.</p>
+  Criar nomes intuitivos facilita a compreensão de seu código. Qualquer programador deve ser capaz de facilmente entender o que é proposto no contexto do código.</p>
   
   <p>O padrão também recomenda que as palavras sejam separadas com letra maiúscula e colocar um nome que referencie o tipo de retorno e seja intuitivo</p>
 
@@ -128,7 +145,8 @@ public class MinhaClasse {    //classe pública
 </code></pre>
 
 <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Organização de Namespaces e Classes</h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Organização de Namespaces e Classes</h3>
 
 <p>O nome do Namespace deve refletir o propósito das classes presentes no mesmo:</p> 
 
@@ -149,14 +167,29 @@ public class MinhaClasse {    //classe pública
 </code></pre>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comentários</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>É recomendado a utilização de comentários somente quando há necessidade de uso.
+  Deve-se evitar a utilização de comentários desnecessários e também a mistura de idiomas.
+  Entretanto, caso a classe fique muito complexa devemos inserir no código alguns comentários sobre ela.</p> 
+
+
+<p>Recomendado:</p>
+<pre><code>
+//using correto
+</code></pre>
+
+<p>Não recomendado:</p>
+
+<pre><code>
+//using incorreto
+</code></pre>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contato</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Você pode contatar o autor desse padrão via Twitter <a href="https://twitter.com/BrunoMurawski" class="user-mention">@BrunoMurawski</a> para trocar ideias e informações!</p>
+
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/BrunoMurawski/padraoCodificacao">Padraocodificacao</a> foi criado e é mantido por <a href="https://github.com/BrunoMurawski">BrunoMurawski</a>.</span>

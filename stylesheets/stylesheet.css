@@ -115,6 +115,8 @@ a {
   color: #159957; }
 .main-content p {
   margin-bottom: 1em; }
+
+
 .main-content code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -232,6 +234,37 @@ a {
 .site-footer-credits {
   color: #819198; }
 
+#tituloNegrito {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.pNegrito {
+  margin-bottom: 1em;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.destaque{
+  color: #155799;
+  font-weight: bold;
+}
+
+.naoRecomendado{
+  color: #dd4b39;
+  font-weight: bold;
+}
+
+.ok{
+  color: #159957;
+  font-weight: bold;
+}
+
+.titulosTabela{
+  color: #f3f6fa;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 64em) {
   .site-footer {
     font-size: 1rem; } }
@@ -243,3 +276,4 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+

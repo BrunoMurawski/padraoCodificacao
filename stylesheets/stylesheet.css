@@ -9,6 +9,10 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
+td{
+   font-size:17.6px;
+}
+
 a {
   color: #1e6bb8;
   text-decoration: none; }
@@ -263,6 +267,41 @@ a {
 .titulosTabela{
   color: #f3f6fa;
   font-weight: bold;
+}
+
+
+.tdOk{
+    font-size:28px;
+    color: #159957;
+    font-weight: bold;
+}
+
+.tdNok{
+    font-size:28px;
+    color: #dd4b39;
+    font-weight: bold;
+}
+
+.tdVerde{
+    background-color: #159957;
+    color: #f3f6fa;
+    font-weight: bold;
+}
+
+.tdAzul{
+    background-color: #155799;
+    color: #f3f6fa;
+    font-weight: bold;
+}
+
+.tdCinza{
+    font-family:'Trebuchet MS';
+    font-weight: bold;
+}
+
+.tdCinza{
+    font-family:'Trebuchet MS';
+    font-weight: bold;
 }
 
 @media screen and (min-width: 64em) {

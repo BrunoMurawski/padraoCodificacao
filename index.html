@@ -420,14 +420,15 @@
         <p>
             É recomendado a utilização de comentários somente quando há necessidade de uso.
             Deve-se evitar a utilização de comentários desnecessários e também a mistura de idiomas.
-            Entretanto, caso a classe fique muito complexa devemos inserir no código alguns comentários sobre ela.
+            Entretanto, caso a classe fique muito complexa devemos inserir no código alguns comentários sobre ela no formato XML.
         </p>
         <p class="destaque">Recomendado:</p>
         <pre><code>
-        //< summary > Descrição da Classe ou Método< /summary >
-        //< param > Descrever a origem dos parâmetros ou outras informações relevantes  < /param >
-        //< returns > Descrever o retorno do método < /returns >
-        //< exception cref="System.Exception" > Descrever a exceções tratadas < /exception > 
+        ///< summary > Descrição da Classe ou Método
+        ///< param > Descrever a origem dos parâmetros ou outras informações relevantes  < /param >
+        ///< returns > Descrever o retorno do método < /returns >
+        ///< exception cref="System.Exception" > Descrever a exceções tratadas < /exception > 
+        ///< /summary >
         </code></pre>
 
         <h4>

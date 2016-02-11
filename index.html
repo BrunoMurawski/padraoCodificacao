@@ -367,6 +367,67 @@
         <p><b>private</b>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |   <b class="ok">✔</b>   |    <b class="naoRecomendado">✘</b>    |    <b class="naoRecomendado">✘</b>     |   <b class="naoRecomendado">✘</b> (visível apenas na classe na qual a classe foi declarada).</p> 
         <p><b>no modifier</b>  |  <b class="ok">✔</b>   |    <b class="naoRecomendado">✘</b>   |    <b class="naoRecomendado">✘</b>     |   <b class="naoRecomendado">✘</b> (visível apenas na classe na qual a classe foi declarada, pois se não é declarado o modifier o sistema aceita como private).</p>
         
+		
+		<h4 id="tabelaNomenclaturas">Tabela de Modificadores:</h4>
+
+        <table border="1" cellspacing="1">
+            <tbody>
+                <tr>
+                    <td bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">Modifier</strong></font></td>
+                    <td bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">Class</strong></font></td>
+                    <td align="center" bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">Package</strong></font></td>
+					<td align="center" bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">Subclass</strong></font></td>
+					<td align="center" bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">World</strong></font></td>
+					<td align="center" bgcolor="#159957"><font face="Trebuchet MS"><strong class="titulosTabela">Obs</strong></font></td>
+                </tr>
+
+
+                <tr>
+                    <td><font face="Trebuchet MS"><b>public</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+					<td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td><font face="Trebuchet MS"><b>(visível em qualquer lugar que use a classe na qual a classe foi declarada).</b></font></td>
+                    </font></td>
+                </tr>
+
+				
+	            <tr>
+                    <td><font face="Trebuchet MS"><b>protected</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+					<td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+                    <td><font face="Trebuchet MS"><b>(visível na classe na qual a classe foi declarada e também em classes derivadas).</b></font></td>
+                    </font></td>
+                </tr>
+              
+			                <tr>
+                    <td><font face="Trebuchet MS"><b>private</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+					<td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+                    <td><font face="Trebuchet MS"><b>(visível apenas na classe na qual a classe foi declarada).</b></font></td>
+                    </font></td>
+                </tr>
+
+				
+	            <tr>
+                    <td><font face="Trebuchet MS"><b>no modifier</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="ok">✔</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+					<td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+                    <td align="center"><font face="Trebuchet MS" size="12"><b class="naoRecomendado">✘</b></font></td>
+                    <td><font face="Trebuchet MS"><b>(visível apenas na classe na qual a classe foi declarada, pois se o modifier não é declarado, o modifier o sistema aceita como private).</b></font></td>
+                    </font></td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+		
         
         <p class="destaque">Recomendado:</p>
         <pre>

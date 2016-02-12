@@ -13,27 +13,18 @@
     <section class="page-header">
         <h1 class="project-name">Padrão de Codificação AutoCode</h1>
         <h2 class="project-tagline"></h2>
-
         <a href="#sobre" class="btn">Sobre</a>
-
         <a href="" class="btn">Clareza na Escrita</a>
-
         <a href="#nomenclatura" class="btn">Nomenclaturas</a>
         <a href="#tabelaNomenclaturas" class="btn">Tabela de Nomenclaturas</a>
-
         <a href="#declaracoes" class="btn">Declarações</a>
-
         <a href="#modificadoresHierarquiaDeclaracoes" class="btn">Modificadores e Hierarquia de Declarações</a>
         <a href="#tabelaModificadores" class="btn">Tabela de Modificadores</a>
-        
+
         <a href="#organizacaoNamespacesClasses" class="btn">Organização de Namespaces e Classes</a>
-
         <a href="#comentarios" class="btn">Comentários</a>
-
         <a href="" class="btn">Identação</a>
-
         <a href="#contato" class="btn">Contato</a>
-
 
     </section>
     <section class="main-content">
@@ -49,7 +40,6 @@
             mais rápida em grupo através da através das boas práticas e o código limpo.
 
         </p>
-
         <h3>
             <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boas Práticas - Clareza na Escrita
         </h3>
@@ -61,23 +51,18 @@
         <p>Tendo isso em vista, é fundamental que o programador pense antes de escrever nossas classes e métodos, que outras pessoas irão lê-las e possivelmente realizar manutenções nas mesmas.</p>
         <p>Por essa razão, este padrão recomenda que o programador ao escrever um trecho de código, pense em qual a percepção que possivelmente outros programadores teriam sobre o código escrito.</p>
         <p>A seguir seguirão algumas recomendações que podem auxiliar na criação de um código mais intuitivo e de fácil manutenção:</p>
-
         <h3 id="nomenclatura">
             <a class="anchor" href="#rather-drive-stick" aria-hidden="true">
                 <span class="octicon octicon-link"></span>
             </a>Nomenclaturas
         </h3>
-
         <p>
             É muito importante que, ao se ler o nome de uma variável ou método seja possível entender o que ela/ele faz.
             Os nomes devem ser autoexplicativos, ser mais o completo possível e transmitir ao programador/testador sua razão de existir.
             Criar nomes intuitivos facilita a compreensão de seu código. Qualquer programador deve ser capaz de facilmente entender o que é proposto no contexto do código.
         </p>
-
         <h4>A quantia de tempo gasto lendo código versus escrevendo é bem mais de 10 para 1. Então, fazer o código mais fácil de ler, o torna mais fácil de escrever.</h4>
         <p id="tituloNegrito">Robert C. Martin</p>
-
-
 
         <h4 id="propriedades">Nomenclatura de Propriedades e WebElements:</h4>
         <p>
@@ -85,40 +70,35 @@
             Neste padrão todas as palavras devem iniciar com letra maiúscula e sem espaços.
             Em WebElements utilizados para os testes, devem ser adicionados prefixos para indicar que tipo de elemento é exibido na tela.
         </p>
-        <p>Ex: int <b>CodigoItem { get; set; };</b>.</p>
+        <p>Ex: int <b>CodeItem { get; set; };</b>.</p>
         <p>Em WebElements utilizados para os testes, além de utilizar UpperCamelCase como formato, os mesmos devem indicar que tipo de WebElement são em seus nomes:</p>
         <ul class="lista_normal">
-            <li><b class="destaque">Btn</b>NomeWebElement = <b class="destaque">Btn</b> indica que o WebElement é uma <b class="destaque">botão</b> exibido na tela</li>
-            <li><b class="destaque">Lbl</b>NomeWebElement = <b class="destaque">Lbl</b> indica que o WebElement é uma <b class="destaque">label</b> exibido na tela</li>
-            <li><b class="destaque">Lnk</b>NomeWebElement = <b class="destaque">Lnk</b> indica que o WebElement é uma <b class="destaque">link</b> exibido na tela</li>
+            <li><b class="destaque">Btn</b>WebElementName = <b class="destaque">Btn</b> indica que o WebElement é uma <b class="destaque">botão</b> exibido na tela</li>
+            <li><b class="destaque">Lbl</b>WebElementName = <b class="destaque">Lbl</b> indica que o WebElement é uma <b class="destaque">label</b> exibido na tela</li>
+            <li><b class="destaque">Lnk</b>WebElementName = <b class="destaque">Lnk</b> indica que o WebElement é uma <b class="destaque">link</b> exibido na tela</li>
         </ul>
-
-        <p>Ex: IWebElement <b class="destaque">Btn</b><b>LogarCarrinho</b>{ get { return driver.FindElement(By.CssSelector(<b>swBtnLogarCarrinho</b>)); } }.</p>
-
+        <p>Ex: IWebElement <b class="destaque">Btn</b><b>Login</b>{ get { return driver.FindElement(By.CssSelector(<b>swBtnLogin</b>)); } }.</p>
 
         <h4 id="nomenclaturaVariaveis">Nomenclatura de Variáveis e Atributos:</h4>
         <p>
             Para todas as variáveis e atributos de utilização interna deve ser adotada a escrita em língua inglesa utilizando o formato LowerCamelCase.
             Nesse formato, sempre a primeira letra é minúscula seguido pelas próximas palavras com a primeira letra maiúscula e sem espaços.
         </p>
-        <p>Ex: int<b> quantidadeItensCarrinho;</b>.
+        <p>Ex: int<b> amountCartItems;</b>.
 
         <p>Caso o atributo referenciar uma propriedade o mesmo deve iniciar com underline"_"</p>
-        <p>Ex: int <b class="destaque">_</b><b>codigoItem;</b>.</p>
-
+        <p>Ex: int <b class="destaque">_</b><b>codeItem;</b>.</p>
         <p>Além de utilizar LowerCamelCase como formato, as variáveis e atributos devem indicar sua função em seu nome:</p>
         <ul class="lista_normal">
-            <li><b class="destaque">sw</b>NomeVariável = <b class="destaque">sw</b> indica que a variável é uma <b class="destaque">S</b>tring utilizada para guardar o identificador do <b class="destaque">W</b>ebElement</li>
-            <li><b class="destaque">st</b>NomeVariável = <b class="destaque">st</b> indica que se trata de uma variável <b class="destaque">St</b>atic</li>
-            <li><b class="destaque">_</b>nomeAtributoIgualPropriedade = <b class="destaque">_</b> indica que o atributo referencia uma <b class="destaque">propriedade </b>de mesmo nome</li>
+            <li><b class="destaque">sw</b>VariableName = <b class="destaque">sw</b> indica que a variável é uma <b class="destaque">S</b>tring utilizada para guardar o identificador do <b class="destaque">W</b>ebElement</li>
+            <li><b class="destaque">st</b>VariableName = <b class="destaque">st</b> indica que se trata de uma variável <b class="destaque">St</b>atic</li>
+            <li><b class="destaque">_</b>AttributeNameEqualProperty = <b class="destaque">_</b> indica que o atributo referencia uma <b class="destaque">propriedade </b>de mesmo nome</li>
         </ul>
-
         <h4 id="nomenclaturaConstantes">Nomenclatura de Constantes:</h4>
         <p>Todas as constantes definidas nos códigos devem ser escritas em língua inglesa e seguir o padrão UpperCase.</p>
         <p>Nesse formato, todas as letra sempre são maiúsculas e como separador de palavras deve ser utilizado underline(_).</p>
-        <p> Ex: private final String <b>NOME_DA_CONSTANTE</b>.</p>
+        <p> Ex: private final String <b>CONSTANT_NAME</b>.</p>
         <p> Ex: private final String <b>URL</b>= "https://github.com/brunomurawski";</p>
-
 
         <h4 id="nomenclaturaClasses">Nomenclatura de Classes:</h4>
         <p>
@@ -126,26 +106,23 @@
             Neste padrão todas as palavras devem iniciar com letra maiúscula e sem espaços.
             Em classes de testes, devem ser adicionados o sufixo test.
         </p>
-        <p> Ex: class FormasPagamento{}</p>
-        <p> Ex Classes de Teste: class ComprarCamisas<b>Test</b>{}</p>
-
+        <p> Ex: class PaymentForms{}</p>
+        <p> Ex Classes de Teste: class BuyShirts<b>Test</b>{}</p>
         <h4 id="nomenclaturaMetodos">Nomenclatura de Métodos:</h4>
         <p>
             Para a nomenclatura de métodos, como na de classes, também devemos manter a utilização da língua inglesa, mas utilizar como formato o padrão UpperCamelCase ou PascalCase.
             Neste padrão todas as palavras devem iniciar com letra maiúscula e sem espaços.
             Recomenda-se iniciar o nome do método com um verbo.
         </p>
-        <p> Ex: string GetFormaPagamento()</p>
-        <p> Ex: void LogarCarrinho()</p>
-
+        <p> Ex: string GetPaymentForm()</p>
+        <p> Ex: void LogOut()</p>
         <h4 id="nomenclaturaParametros">Nomenclatura de Parâmetros:</h4>
         <p>
             Para a nomenclatura de parâmetros devemos manter a utilização da língua inglesa, mas utilizar como formato o padrão LowerCamelCase.
             Nesse formato, sempre a primeira letra é minúscula seguido pelas próximas palavras com a primeira letra maiúscula e sem espaços.
         </p>
-        <p> Ex: void LogarCarrinho( string <b>usuario</b>, string <b>password</b>)</p>
-        <p> Ex: double TotalItensCarrinho( string <b>primeiroItem</b>, string <b>segundoItem</b>)</p>
-
+        <p> Ex: void Login( string <b>user</b>, string <b>password</b>)</p>
+        <p> Ex: double TotalCartItems( string <b>firstItem</b>, string <b>secondItem</b>)</p>
         <h4 id="tabelaNomenclaturas">Tabela de Nomenclaturas:</h4>
         <table cellspacing="1">
             <tbody>
@@ -154,16 +131,15 @@
                     <td bgcolor="#159957"><font face="Trebuchet MS"><strong class="titulosTabela">Nomenclatura</strong></font></td>
                     <td align="center" bgcolor="#155799"><font face="Trebuchet MS"><strong class="titulosTabela">Exemplo</strong></font></td>
                 </tr>
-
                 <tr>
                     <td><font face="Trebuchet MS"><strong>Propriedades e WebElements</strong></font></td>
                     <td><font face="Trebuchet MS">UpperCamelCase ou Pascal Case</font></td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b class="destaque">Btn</b>NomeWebElement</p>
-                            <p><b class="destaque">Lbl</b>NomeWebElement</p>
-                            <p><b class="destaque">Lnk</b>NomeWebElement</p>
-                            <p><b>CodigoItem { get; set; }</b></p>
+                            <p><b class="destaque">Btn</b>WebElementName</p>
+                            <p><b class="destaque">Lbl</b>WebElementName</p>
+                            <p><b class="destaque">Lnk</b>WebElementName</p>
+                            <p><b>CodeItem { get; set; }</b></p>
                         </font>
                     </td>
                 </tr>
@@ -172,10 +148,10 @@
                     <td><font face="Trebuchet MS">LowerCamelCase</font></td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b>quantidadeItensCarrinho</b></p>
-                            <p><b class="destaque">sw</b>NomeVariável</p>
-                            <p><b class="destaque">st</b>NomeVariável</p>
-                            <p><b class="destaque">_</b>codigoItem</b></p>
+                            <p><b>amountCartItems</b></p>
+                            <p><b class="destaque">sw</b>VariableName</p>
+                            <p><b class="destaque">st</b>VariableName</p>
+                            <p><b class="destaque">_</b>CodeItem</p>
                         </font>
                     </td>
                 </tr>
@@ -184,7 +160,7 @@
                     <td><font face="Trebuchet MS">UpperCase</font></td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b>NOME_DA_CONSTANTE</b></p>
+                            <p><b>CONSTANT_NAME</b></p>
                             <p><b>URL</b></p>
                         </font>
                     </td>
@@ -194,19 +170,18 @@
                     <td><font face="Trebuchet MS">UpperCamelCase ou Pascal Case</font></td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b>FormasPagamento{}</b></p>
-                            <p><b>ComprarCamisasTest{}</b></p>
+                            <p><b>PaymentForms{}</b></p>
+                            <p><b>BuyShirtsTest{}</b></p>
                         </font>
                     </td>
                 </tr>
-
                 <tr>
                     <td><font face="Trebuchet MS"><strong>Métodos</strong></font></td>
                     <td><font face="Trebuchet MS">UpperCamelCase ou Pascal Case</font></td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b>GetFormaPagamento()</b></p>
-                            <p><b>LogarCarrinho()</b></p>
+                            <p><b>GetPaymentForm()</b></p>
+                            <p><b>LogOut()</b></p>
                         </font>
                     </td>
                 </tr>
@@ -219,14 +194,13 @@
                     </td>
                     <td align="center">
                         <font face="Trebuchet MS">
-                            <p><b>LogarCarrinho( string usuario, string password)</b></p>
-                            <p><b>TotalItensCarrinho( string primeiroItem, string segundoItem)</b></p>
+                            <p><b>Login( string user, string password)</b></p>
+                            <p><b>TotalCartItems( string firstItem, string secondItem)</b></p>
                         </font>
                     </td>
                 </tr>
             </tbody>
         </table>
-
         <h3>
             <a id="declaracoes" class="anchor" href="#rather-drive-stick" aria-hidden="true">
                 <span class="octicon octicon-link"></span>
@@ -246,30 +220,26 @@
         <p class="destaque">Recomendado:</p>
         <pre>
         <code>
-                private int quantidadeItensCarrinho;
-                private int valorItem;
-                private int quantidadeParcelasCartao;
+                private int amountCartItems;
+                private int itemPrice;
+                private int amountCardInstallments;
             </code>
         </pre>
         <p class="naoRecomendado">Não Recomendado:</p>
-
         <pre>
         <code>
-            private int quantidadeItensCarrinho, valorItem, quantidadeParcelasCartao;
+            private int amountCartItems, itemPrice, amountCardInstallments;
             </code>
         </pre>
-
         <h3>
             <a id="modificadoresHierarquiaDeclaracoes">
             </a>Modificadores e Hierarquia de Declarações
         </h3>
-
         <p>O padrão indica que seja seguida uma hierarquia na declaração, ordenada pelos modificadores na seguinte ordem:</p>
         <p>Public</p>
         <p>Protected</p>
         <p>Private</p>
         <p>Essa ordem tem como objetivo demonstrar os atributos por nível de visibilidade. Indo desde a restrição de acesso mais aberta até a mais restrita:</p>
-
         <h4 id="tabelaModificadores">Tabela de Modificadores:</h4>
         <table cellspacing="1">
             <tbody>
@@ -281,7 +251,6 @@
                     <td class="tdAzul">World</td>
                     <td class="tdVerde">Obs</td>
                 </tr>
-
                 <tr>
                     <td class="tdCinza">public</td>
                     <td align="center" class="tdOk">✔</td>
@@ -290,7 +259,6 @@
                     <td align="center" class="tdOk">✔</td>
                     <td class="tdCinza">(visível em qualquer lugar que use a classe na qual a classe foi declarada).</td>
                 </tr>
-
                 <tr>
                     <td class="tdCinza">protected</td>
                     <td align="center" class="tdOk">✔</td>
@@ -299,47 +267,43 @@
                     <td align="center" class="tdNok">✘</td>
                     <td class="tdCinza">(visível na classe na qual a classe foi declarada e também em classes derivadas).</td>
                 </tr>
-
                 <tr>
                     <td class="tdCinza">private</td>
                     <td align="center" class="tdOk">✔</td>
-                    <td align="center" class="tdOk">✔</td>
+                    <td align="center" class="tdNok">✘</td>
                     <td align="center" class="tdNok">✘</td>
                     <td align="center" class="tdNok">✘</td>
                     <td class="tdCinza">(visível apenas na classe na qual a classe foi declarada).</td>
                 </tr>
-
                 <tr>
                     <td class="tdCinza">no modifier</td>
                     <td align="center" class="tdOk">✔</td>
-                    <td align="center" class="tdOk">✔</td>
+                    <td align="center" class="tdNok">✘</td>
                     <td align="center" class="tdNok">✘</td>
                     <td align="center" class="tdNok">✘</td>
                     <td class="tdCinza">(visível apenas na classe na qual a classe foi declarada, pois se o modifier não é declarado, o modifier o sistema aceita como private).</td>
                 </tr>
-
             </tbody>
         </table>
-
 
         <p class="destaque">Recomendado:</p>
         <pre>
         <code>
-            public class MinhaClasse {       //classe pública
-                protected Decimal decimal;  //atributo decimal protected
-                private int inteiro;       //atributo inteiro private
+            public class MyClass {             //classe pública
+                protected Double TotalItems;  //atributo double protected
+                private int itemPrice;       //atributo inteiro private
             }
             </code>
         </pre>
-
         <p class="naoRecomendado">Não recomendado:</p>
-        <pre><code>
-           public class MinhaClasse {          //classe pública
-                private int inteiro;          //atributo inteiro private
-                protected Decimal decimal;   //atributo decimal protected
+        <pre>
+        <code>
+           public class MyClass {              //classe pública
+                private int itemPrice;        //atributo inteiro private
+                protected Double TotalItems; //atributo double protected
             }
-        </code></pre>
-
+        </code>
+        </pre>
         <h3>
             <a id="organizacaoNamespacesClasses">
             </a>Organização de Namespaces e Classes
@@ -351,21 +315,19 @@
         </p>
         <p class="destaque">Recomendado:</p>
         <pre>
-        <code>
-            using EcommerceFunctionalTests.Cenarios.Simular;
-            namespace EcommerceFunctionalTests.Cenarios.Comprar.DoisCartoes.Logado.Busca
+            <code>
+                using EcommerceFunctionalTests.Scenarios.Simulate;
+                namespace EcommerceFunctionalTests.Scenarios.Buy.TwoCards.Logged.Search
             
             </code>
         </pre>
-
         <p class="naoRecomendado">Não recomendado:</p>
         <pre>
-        <code>
-            using EcommerceFunctionalTests.Simular;
-            namespace EcommerceFunctionalTests.Cenarios
+            <code>
+                using EcommerceFunctionalTests.Simulate;
+                namespace EcommerceFunctionalTests.Scenarios
             </code>
         </pre>
-
         <h3>
             <a id="comentarios"></a>Comentários
         </h3>
@@ -382,14 +344,12 @@
         ///< exception cref="System.Exception" > Descrever a exceções tratadas < /exception > 
         ///< /summary >
         </code></pre>
-
         <h4>
             <a id="comentariosCommits"></a>Comentários em Commits
         </h4>
         <p>
             O padrão AutoCode recomenda a utilização de comentários em todos os commits efetuados para auxiliar na compreensão e resolução de problemas ocorridos em versões geradas.
         </p>
-
         <h3>
             <a id="contato"></a>Contato
         </h3>
@@ -398,10 +358,7 @@
             <span class="site-footer-owner"><a href="https://github.com/BrunoMurawski/padraoCodificacao">Padraocodificacao</a> foi criado e é mantido por <a href="https://github.com/BrunoMurawski">BrunoMurawski</a>.</span>
             <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
         </footer>
-
     </section>
-
 
 </body>
 </html>
-
